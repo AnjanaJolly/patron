@@ -3,8 +3,8 @@ import 'package:news_app/common/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class JoinMailList extends StatefulWidget {
-  final String url = 'https://kamat.org/b/Feeds.aspx?SiteID=123';
-  //'https://manage.kmail-lists.com/subscriptions/subscribe?a=WkuMfY&g=VzKJMJ';
+  final String url =
+      'https://manage.kmail-lists.com/subscriptions/subscribe?a=WkuMfY&g=VzKJMJ';
   _JoinMailListState createState() => _JoinMailListState(url: url);
 }
 

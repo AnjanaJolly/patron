@@ -473,15 +473,14 @@ class _NewScreenState extends State<NewScreen> {
 
   Future loadRSSFeed() async {
     print('loadRSSFeed');
-    http.Response response = await http.get(
-        Uri.parse("https://newslogic.io/a/Feeds.aspx?siteID=123"),
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials":
-              'true', // Required for cookies, authorization headers with HTTPS
-          "Access-Control-Allow-Headers":
-              "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-        });
+    http.Response response = await http
+        .get(Uri.parse("https://kamat.org/b/Feeds.aspx?SiteID=123"), headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials":
+          'true', // Required for cookies, authorization headers with HTTPS
+      "Access-Control-Allow-Headers":
+          "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+    });
 //      await http.get("https://newslogic.io/a/Feeds.aspx?SiteID=12&limit=1");
     print(response.statusCode);
     print(response.body);
